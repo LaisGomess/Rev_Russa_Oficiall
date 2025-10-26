@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Revolução 1917 — Turismo Histórico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_the_Soviet_Union_%281956%E2%80%931991%29.svg" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+	<img src="https://cdn.pixabay.com/photo/2016/01/29/23/47/russian-flag-1168870_1280.jpg" alt="logo"
+      <div class="logo">Russia 1917</div>
+      <div>
+        <div style="font-weight:700">Agência De Viajem Rota Vermelha</div>
+        <div style="font-size:12px;color:var(--muted)">Tour Histórico & Experiências</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center">
+      
+    <nav>
+     <a href="QuemSomos.HTML" >Quem Somos?</a>
+	 <a href="index.html" class="active">Início</a>
+	 <a href="historia.html" >História</a>
+     <a href="destinos.html" >Destinos</a>
+     <a href="experiencias.html" >Experiências</a>
+      <a href="contato.html" >Contato</a>
+    </nav>
+    
+      <div class="lang-toggle"><a href="index_en.html">EN</a></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>Linha do Tempo — 1917</h1>
+        <p class="lead">Fatos, datas e impacto.</p>
+        <div class="cta">
+          <a class="btn" href="destinos.html">Explorar</a>
+          <button class="btn ghost" onclick="openModal('Sobre o Roteiro','Este projeto traz roteiros criativos e informativos para fins educacionais e turísticos. O conteúdo histórico é apresentado de forma resumida e com referências.')">Sobre</button>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          
+<h3>Resumo histórico (1917)</h3>
+<p style="color:var(--muted)">A Revolução Russa de 1917 engloba um conjunto de eventos — tanto a revolta de fevereiro, que resultou na abdicação do czar Nicolau II, quanto a insurreição de outubro que levou os bolcheviques ao poder. Nosso texto mistura análise acadêmica com narrativa para visitantes: apresenta datas, causas sociais e políticas, e mostra os locais onde estes episódios aconteceram.</p>
+<ul style="color:var(--muted);margin-top:8px">
+  <li><strong>Fevereiro de 1917:</strong> Greves e manifestações em Petrogrado; colapso do regime czarista.</li>
+  <li><strong>Outubro de 1917:</strong> Tomada de pontos estratégicos; o governo provisório é derrubado.</li>
+  <li><strong>3 de março de 1918</strong> Saída da Rússia da Primeira Guerra.</li>
+  <li><strong>Guerra Civil entre 1918 e 1921</strong> Um conflito que eclodiu após a Revolução Russa de 1917 entre o governo bolchevique (o Exército Vermelho) e seus oponentes antibolcheviques (o Exército Branco).</li>
+  <li><strong>1922:</strong> É criada a União das Repúblicas Socialistas Soviéticas (URSS)</li>
+  <li><strong>1924:</strong> Após a morte de Lênin, Josef Stalin assume a liderança e consolida o regime comunista na URSS</li>
+  <li><strong>1991:</strong> O comunismo chega ao fim na Rússia com a dissolução da União Soviética.</li>
+</ul>
+<p style="color:var(--muted);margin-top:8px">No passeio, destacamos contexto social (escassez, mobilização feminina, papel dos sovietes) e oferecemos um roteiro que explicita causas, atores e legados: cuidado ao contar a história, com referências e materiais de apoio.</p>
+
+        </div>
+      </div>
+
+      <aside class="card">
+        <img src="https://img.freepik.com/fotos-premium/palacio-de-inverno-em-sao-petersburgo_438905-375.jpg" alt="Palácio de Inverno" style="width:100%;height:240px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+        <h3 style="margin:0 0 6px">Palácio de Inverno</h3>
+        <p style="margin:0;color:var(--muted)">Visita guiada ao antigo centro do poder, com recriações históricas.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" onclick="openModal('Reservar','Formulário de reserva simulado — integrar a um backend para envio real.')">Reservar</button>
+          <a class="btn ghost" href="historia.html">Linha do Tempo</a>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <div id="modal-root" style="display:none"></div>
+<a href="https://www.brasildefato.com.br/especiais/especiais-especial-or-revolucao-russa-100-anos/" target="_blank" rel="noopener noreferrer"> <img src="https://www.tributomunicipal.com.br/portal/images/saiba-mais-png-7.png"> </a>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Carrossel com Títulos - Novo</title>
+<style>
+  .carousel {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    position: relative;
+    min-width: 600px;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  .slide-title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 8px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 22px;
+    user-select: none;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="slides" id="slides2">
+    <div class="slide">
+      <img src="https://assets.brasildefato.com.br/2024/09/image_processing20200201-29235-1nfnxod.jpg" alt="Imagem 1">
+      <div class="slide-title">Manifestação de 1917</div>
+    </div>
+    <div class="slide">
+      <img src="https://cloudfront-us-east-1.images.arcpublishing.com/estadao/IXPJIEPJDRLCLA3DTB6CYO6QYA.jpg" alt="Imagem 2">
+      <div class="slide-title">Discurso de Lenin</div>
+    </div>
+    <div class="slide">
+      <img src="https://media.gazetadopovo.com.br/2023/09/06161321/Leon-Trotsky-3-1.jpg" alt="Imagem 3">
+      <div class="slide-title">Lideres dos Bolcheviques</div>
+    </div>
+    <div class="slide">
+      <img src="https://s1.static.brasilescola.uol.com.br/be/2022/07/revolucao-russa.jpg" alt="Imagem 4">
+      <div class="slide-title">Revolução Russa</div>
+    </div>
+  </div>
+
+  <button class="prev" onclick="moveSlide2(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide2(1)">&#10095;</button>
+</div>
+
+<script>
+  let currentIndex2 = 0;
+  const slides2 = document.getElementById('slides2');
+  const totalSlides2 = slides2.children.length;
+
+  function moveSlide2(direction) {
+    currentIndex2 += direction;
+    if (currentIndex2 < 0) currentIndex2 = totalSlides2 -1;
+    if (currentIndex2 >= totalSlides2) currentIndex2 = 0;
+    slides2.style.transform = `translateX(${-currentIndex2 * 600}px)`;
+  }
+</script>
+
+</body>
+</html>
+
+  <footer>
+    </script>
+ <footer>
+    <div style="text-align:center;color:var(--muted);padding:18px 0"> Instagram: @Agenciarotavermelha1917🚩</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0"> Whatsapp: 55 (11)98222-6247</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0">© 2025 Turismo Histórico — Rota Vermelha 1917 🚩 • Projeto feito por : @Jean</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

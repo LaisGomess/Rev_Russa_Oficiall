@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Revolução 1917 — Turismo Histórico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_the_Soviet_Union_%281956%E2%80%931991%29.svg" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+	<img src="https://cdn.pixabay.com/photo/2016/01/29/23/47/russian-flag-1168870_1280.jpg" alt="logo"
+      <div class="logo">Russia 1917</div>
+      <div>
+        <div style="font-weight:700">Agência De Viajem Rota Vermelha</div>
+        <div style="font-size:12px;color:var(--muted)">Tour Histórico & Experiências</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center">
+      
+    <nav>
+     <a href="QuemSomos.HTML" >Quem Somos?</a>
+	 <a href="index.html" class="active">Início</a>
+	 <a href="historia.html" >História</a>
+     <a href="destinos.html" >Destinos</a>
+     <a href="experiencias.html" >Experiências</a>
+      <a href="contato.html" >Contato</a>
+    </nav>
+    
+      <div class="lang-toggle"><a href="index_en.html">EN</a></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>Experiências Imersivas</h1>
+        <p class="lead">Escolha como quer viver essa história.</p>
+        <div class="cta">
+          <a class="btn" href="destinos.html">Explorar</a>
+          <button class="btn ghost" onclick="openModal('Sobre o Roteiro','Este projeto traz roteiros criativos e informativos para fins educacionais e turísticos. O conteúdo histórico é apresentado de forma resumida e com referências.')">Sobre</button>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="min-width:220px"><strong>Recriação Noturna</strong><p style="color:var(--muted)">Encenações históricas em locais reais.</p></div>
+        <div class="card" style="min-width:220px"><strong>Museus VIP</strong><p style="color:var(--muted)">Acesso a arquivos e arquivos documentais.</p></div>
+        <div class="card" style="min-width:220px"><strong>Cruzeiro Aurora</strong><p style="color:var(--muted)">Visita a bordo e tour guiado.</p></div>
+      </div>
+    
+        </div>
+      </div>
+
+      <aside class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/RedSquare_%28pixinn.net%29.jpg" alt="Praça Vermelha" style="width:100%;height:240px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+        <h3 style="margin:0 0 6px">Praça Vermelha</h3>
+        <p style="margin:0;color:var(--muted)">Visita guiada ao antigo centro do poder, com recriações históricas.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" onclick="openModal('Reservar','Formulário de reserva simulado — integrar a um backend para envio real.')">Reservar</button>
+          <a class="btn ghost" href="historia.html">Linha do Tempo</a>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <div id="modal-root" style="display:none"></div> 
+<!-- Seção de Planos de Viagem -->
+<style>
+.planos-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #15171a;
+  padding: 44px 0 44px 0;
+  border-radius: 16px;
+  margin: 22px 0;
+}
+.plano-card {
+  background: #222325;
+  width: 290px;
+  border-radius: 11px;
+  box-shadow: 0 5px 16px #0006;
+  padding: 28px 24px 20px 24px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #C0392B33;
+  transition: transform 0.2s;
+}
+.plano-card:hover {
+  transform: scale(1.05);
+  border-color: #C0392B;
+}
+.plano-titulo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #C0392B;
+}
+.plano-preco {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 5px 0 14px 0;
+  color: #fff;
+}
+.plano-beneficios {
+  text-align: left;
+  margin-bottom: 16px;
+  font-size: 1em;
+  width: 100%;
+}
+.plano-beneficios li {
+  margin-bottom: 7px;
+  color: #ddd;
+}
+.plano-brinde {
+  background: #C0392B;
+  color: #fff;
+  padding: 6px 13px;
+  border-radius: 18px;
+  margin-top: 7px;
+  font-size: 0.95em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px #0003;
+}
+.btn-assinar {
+  background: #C0392B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-assinar:hover {
+  background: #96281B;
+}
+</style>
+
+<div class="planos-container">
+  <div class="plano-card">
+    <div class="plano-titulo">Básico</div>
+    <div class="plano-preco">R$ 8,500,00</div>
+    <ul class="plano-beneficios">
+      <li>Roteiro padrão de 5 dias</li>
+      <li>Hospedagem econômica</li>
+      <li>Traslado aeroporto-hotel</li>
+      <li>Suporte 24 horas online durante a viagem</li>
+      <li>Passeio panorâmico pelo centro histórico</li>
+	  <li>Guia Bilingue exclusivo</li>
+    </ul>
+    <div class="plano-brinde">Brinde: Ecobag personalizada e muitos outros</div>
+    <button class="btn-assinar" onclick="escolherPlano('Básico')">Assinar Plano</button>
+  </div>
+  <div class="plano-card">
+    <div class="plano-titulo">Intermediário</div>
+    <div class="plano-preco">R$ 16.890,00</div>
+    <ul class="plano-beneficios">
+      <li>Roteiro estendido de 8 dias</li>
+      <li>Hospedagem 3 estrelas</li>
+      <li>2 passeios exclusivos (à escolha)</li>
+      <li>Transfers completos</li>
+      <li>Ingresso para museu histórico</li>
+	  <li>Guia Bilingue exclusivo</li>
+    </ul>
+    <div class="plano-brinde">Brinde: Kit viagem + mapa histórico e muitos outros</div>
+    <button class="btn-assinar" onclick="escolherPlano('Intermediário')">Assinar Plano</button>
+  </div>
+  <div class="plano-card">
+    <div class="plano-titulo">Premium</div>
+    <div class="plano-preco">R$20.000,00</div>
+    <ul class="plano-beneficios">
+      <li>Roteiro personalizado de até 12 dias</li>
+      <li>Hospedagem 5 estrelas</li>
+      <li>Guia bilíngue exclusivo</li>
+      <li>Passe VIP: acesso a atrações sem filas</li>
+      <li>City tour em van privativa</li>
+      <li>Suporte integral 24h</li>
+    </ul>
+    <div class="plano-brinde">Brinde: Mala de viagem + jantar exclusivo e muitos outros</div>
+    <button class="btn-assinar" onclick="escolherPlano('Premium')">Assinar Plano</button>
+  </div>
+</div>
+
+<script>
+function escolherPlano(plano) {
+  alert(`Você escolheu o Plano ${plano}! Em breve nossa equipe entrará em contato para finalizar a reserva.`);
+  // Aqui você pode integrar com seu sistema de reserva ou formulário de contato
+}
+</script>
+
+<style>
+#feedback-aba-turismo {
+  position: fixed;
+  left: 0; top: 120px; z-index: 1111;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+#btn-feedback-turismo {
+  background: #C0392B;
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.03em;
+  letter-spacing: 1px;
+  box-shadow: 3px 3px 10px #0004;
+}
+#painel-feedback-turismo {
+  display: none;
+  background: #181818;
+  color: #eee;
+  width: 340px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 2px 2px 8px #0009;
+  padding: 18px 14px 10px 14px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 5px;
+}
+#painel-feedback-turismo h3 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 1.18em;
+}
+#feedback-list-turismo {
+  list-style: none; padding: 0; margin: 0 0 15px 0;
+  max-height: 250px;
+  overflow-y: auto;
+  font-size: 0.97em;
+}
+#feedback-list-turismo li {
+  background: #202020;
+  border-radius: 6px;
+  padding: 8px 10px 6px 10px;
+  border-left: 4px solid #C0392B;
+  margin-bottom: 7px;
+}
+.feedback-user {
+  border-left: 4px solid #27ae60 !important;
+  background: #191c1a;
+}
+#form-feedback-turismo input, #form-feedback-turismo textarea {
+  width: 95%;
+  margin-bottom: 8px;
+  background: #101010;
+  color: #fff;
+  border: 1px solid #242424;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 1em;
+}
+#form-feedback-turismo button {
+  background: #C0392B;
+  color: #fff;
+  border: none;
+  padding: 7px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+#form-feedback-turismo button:hover {
+  background: #d35400;
+}
+</style>
+
+<div id="feedback-aba-turismo">
+  <button onclick="abrirFeedbackTurismo()" id="btn-feedback-turismo">Feedbacks</button>
+  <div id="painel-feedback-turismo">
+    <h3>Feedbacks da Agência</h3>
+    <ul id="feedback-list-turismo"></ul>
+    <div id="form-feedback-turismo">
+      <input type="text" id="nome-feedback-turismo" placeholder="Seu nome" maxlength="30"/>
+      <textarea id="comentario-feedback-turismo" placeholder="Como foi sua experiência..." maxlength="200"></textarea>
+      <button onclick="enviarFeedbackTurismo()">Enviar</button>
+    </div>
+  </div>
+</div>
+<script>
+const feedbacksIniciaisTurismo = [
+"Equipe super atenciosa, experiência fantástica!",
+"O tour histórico foi completo e bem explicado.",
+"Nunca imaginei que aprender história pudesse ser tão divertido.",
+"Parabéns pelo site, agendar foi muito fácil.",
+"As dicas que recebi ajudaram muito no meu roteiro.",
+"Ótima agência, recomendo sem dúvidas.",
+"Guias profissionais e muito simpáticos.",
+"O atendimento superou expectativas, obrigado por tudo!",
+"Site organizado, consegui todas as informações que precisei.",
+"Viagem perfeita, obrigada pela recomendação de passeios.",
+"Todo o processo de reserva foi rápido e simples.",
+"Recebi suporte sempre que precisei, nota 10!",
+"Conteúdo do site é muito confiável.",
+"As opções de roteiros são excelentes.",
+"Me surpreendi com a riqueza de detalhes da experiência.",
+"Planejar a viagem ficou muito mais fácil!",
+"Gostei demais do visual do site.",
+"Meu grupo adorou, recomendo a todos.",
+"As experiências vividas vão ficar marcadas na memória.",
+"Todas as dúvidas respondidas com rapidez e cordialidade.",
+"Sensacional! Principalmente para quem gosta de história.",
+"Atendimento personalizado e prestativo.",
+"O site é bonito e fácil de navegar.",
+"Fiquei encantada com o profissionalismo da equipe.",
+"Merece destaque como uma das melhores agências.",
+"Achei os tours exclusivos um diferencial.",
+"Todo o serviço foi impecável.",
+"As imagens do site me fizeram querer viajar já!",
+"Perfeito para quem quer aprender viajando.",
+"O cronograma funcionou conforme combinado.",
+"Já estou indicando para meus amigos.",
+"Super recomendo, experiência única.",
+"Senti muita segurança em todo o processo.",
+"O roteiro histórico foi inovador.",
+"Vou voltar para fazer mais passeios.",
+"Ambiente online é seguro e confiável.",
+"Aprendi muito com as visitas guiadas.",
+"Todos os detalhes foram pensados.",
+"Agência mostrou domínio sobre o destino.",
+"Consegui tirar todas as dúvidas no chat.",
+"Criatividade e carinho em cada etapa da viagem.",
+"Gostei do foco cultural da agência.",
+"Superou expectativas do início ao fim.",
+"As simulações de trajetos ajudam muito.",
+"Facilidade desde a pesquisa até a viagem.",
+"Avaliação mais que positiva!",
+"O site é referência!",
+"Equipe sempre disponível para ajudar.",
+"Vou guardar cada momento dessa viagem.",
+"Planejamento foi prático e transparente.",
+"Minha família amou a experiência."
+];
+
+function abrirFeedbackTurismo() {
+  const painel = document.getElementById('painel-feedback-turismo');
+  painel.style.display = painel.style.display === 'block' ? 'none' : 'block';
+}
+
+function renderFeedbacksTurismo() {
+  const lista = document.getElementById('feedback-list-turismo');
+  lista.innerHTML = '';
+  feedbacksIniciaisTurismo.forEach(comentario => {
+    const li = document.createElement('li');
+    li.textContent = comentario;
+    lista.appendChild(li);
+  });
+  // Carregar feedbacks do localStorage
+  const salvos = JSON.parse(localStorage.getItem('feedbacksUserTurismo') || '[]');
+  salvos.forEach(fb => {
+    const li = document.createElement('li');
+    li.textContent = fb;
+    li.classList.add('feedback-user');
+    lista.appendChild(li);
+  });
+}
+
+function enviarFeedbackTurismo() {
+  const nome = document.getElementById('nome-feedback-turismo').value.trim();
+  const comentario = document.getElementById('comentario-feedback-turismo').value.trim();
+  if (nome && comentario) {
+    const novo = `${nome}: ${comentario}`;
+    let feedbacksUser = JSON.parse(localStorage.getItem('feedbacksUserTurismo') || '[]');
+    feedbacksUser.push(novo);
+    localStorage.setItem('feedbacksUserTurismo', JSON.stringify(feedbacksUser));
+    renderFeedbacksTurismo();
+    document.getElementById('nome-feedback-turismo').value = '';
+    document.getElementById('comentario-feedback-turismo').value = '';
+  } else {
+    alert('Preencha o nome e o comentário!');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', renderFeedbacksTurismo);
+</script>
+ <footer>
+    <div style="text-align:center;color:var(--muted);padding:18px 0"> Instagram: @Agenciarotavermelha1917🚩</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0"> Whatsapp: 55 (11)98222-6247</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0">© 2025 Turismo Histórico — Rota Vermelha 1917 🚩 • Projeto feito por : @Jean</div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Revolução 1917 — Turismo Histórico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Coat_of_arms_of_the_Soviet_Union_%281956%E2%80%931991%29.svg" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+	<img src="https://cdn.pixabay.com/photo/2016/01/29/23/47/russian-flag-1168870_1280.jpg" alt="logo"
+      <div class="logo">Russia 1917</div>
+      <div>
+        <div style="font-weight:700">Agência De Viajem Rota Vermelha</div>
+        <div style="font-size:12px;color:var(--muted)">Tour Histórico & Experiências</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center">
+      
+    <nav>
+     <a href="QuemSomos.HTML" >Quem Somos?</a>
+	 <a href="index.html" class="active">Início</a>
+	 <a href="historia.html" >História</a>
+     <a href="destinos.html" >Destinos</a>
+     <a href="experiencias.html" >Experiências</a>
+      <a href="contato.html" >Contato</a>
+    </nav>
+    
+      <div class="lang-toggle"><a href="index_en.html">EN</a></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>Contato & Reservas</h1>
+        <p class="lead">Fale com nosso time para montar um roteiro sob medida.</p>
+        <div class="cta">
+          <a class="btn" href="destinos.html">Explorar</a>
+          <button class="btn ghost" onclick="openModal('Sobre o Roteiro','Este projeto traz roteiros criativos e informativos para fins educacionais e turísticos. O conteúdo histórico é apresentado de forma resumida e com referências.')">Sobre</button>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          
+      <form onsubmit="event.preventDefault();openModal('Pedido enviado','Seu pedido foi registrado!, Entraremos Em contato em 24 horas via E-mail e Whatsapp).">
+        <label style="display:block;margin-bottom:8px">Nome</label>
+        <input required placeholder="Seu nome" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff">
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <input required placeholder="E-mail" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff">
+          <select style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff">
+		   <input required placeholder="Numero Para Contato" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff">
+          <select style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff">
+            <option>Palácio de Inverno</option><option>Cruzador Aurora</option><option>Praça Vermelha</option>
+          </select>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-top:12px;gap:8px">
+          <button class="btn ghost" type="reset">Limpar</button>
+          <button class="btn" type="submit">Enviar Pedido</button>
+        </div>
+      </form>
+    
+        </div>
+      </div>
+
+      <aside class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/RedSquare_%28pixinn.net%29.jpg" alt="Praça Vermelha" style="width:100%;height:240px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+        <h3 style="margin:0 0 6px">Praça Vermelha</h3>
+        <p style="margin:0;color:var(--muted)">Visita guiada ao antigo centro do poder, com recriações históricas e visitas a lugares fantasticos.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" onclick="openModal('Reservar','Formulário de reserva simulado — integrar a um backend para envio real.')">Reservar</button>
+          <a class="btn ghost" href="historia.html">Linha do Tempo</a>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <div id="modal-root" style="display:none"></div>
+
+  <footer>
+	<div style="text-align:center;color:var(--muted);padding:18px 0"> Instagram: @Agenciarotavermelha1917🚩</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0"> Whatsapp: 55 (11)98222-6247</div>
+	<div style="text-align:center;color:var(--muted);padding:18px 0">© 2025 Turismo Histórico — Rota Vermelha 1917 🚩 • Projeto feito por : @Jean</div>
+ </body>
+ </footer>
+  <script src="script.js"></script>
+</body>
+</html>
